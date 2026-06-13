@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Maximal Performance Apps</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #0D0B07;
+      --surface: #141109;
+      --border: rgba(201,168,76,0.15);
+      --gold: #C9A84C;
+      --gold-dim: rgba(201,168,76,0.6);
+      --text: #F0E8D8;
+      --text-muted: rgba(240,232,216,0.55);
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'DM Sans', sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      padding: 3rem 2rem 2rem;
+      text-align: center;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .wordmark {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 2.2rem;
+      letter-spacing: 0.08em;
+      color: var(--gold);
+    }
+
+    .tagline {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-top: 0.4rem;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+
+    main {
+      flex: 1;
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 3rem 1.5rem;
+      width: 100%;
+    }
+
+    h2 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.1rem;
+      letter-spacing: 0.1em;
+      color: var(--text-muted);
+      margin-bottom: 1.5rem;
+    }
+
+    .app-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1rem;
+    }
+
+    .app-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.5rem;
+      text-decoration: none;
+      color: inherit;
+      display: block;
+      transition: border-color 0.2s;
+    }
+
+    .app-card:hover { border-color: var(--gold-dim); }
+
+    .app-icon {
+      width: 52px;
+      height: 52px;
+      background: rgba(201,168,76,0.1);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1rem;
+      font-size: 1.4rem;
+    }
+
+    .app-name {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.3rem;
+      letter-spacing: 0.06em;
+      color: var(--text);
+      margin-bottom: 0.4rem;
+    }
+
+    .app-desc {
+      font-size: 0.875rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+      margin-bottom: 1rem;
+    }
+
+    .app-links {
+      display: flex;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+    }
+
+    .link-pill {
+      font-size: 0.75rem;
+      font-weight: 500;
+      padding: 0.3rem 0.75rem;
+      border-radius: 20px;
+      text-decoration: none;
+      letter-spacing: 0.03em;
+      transition: opacity 0.2s;
+    }
+
+    .link-pill:hover { opacity: 0.8; }
+
+    .pill-support {
+      background: rgba(201,168,76,0.12);
+      color: var(--gold);
+      border: 1px solid rgba(201,168,76,0.25);
+    }
+
+    .pill-privacy {
+      background: rgba(240,232,216,0.06);
+      color: var(--text-muted);
+      border: 1px solid rgba(240,232,216,0.12);
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      border-top: 1px solid var(--border);
+    }
+
+    footer a { color: var(--gold-dim); text-decoration: none; }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="wordmark">Maximal Performance</div>
+    <p class="tagline">Free tools to build your best</p>
+  </header>
+
+  <main>
+    <h2>Our Apps</h2>
+    <div class="app-grid">
+
+      <div class="app-card">
+        <div class="app-icon">⚖️</div>
+        <div class="app-name">Bulk / Cut Calculator</div>
+        <p class="app-desc">TDEE, calorie targets, and macro splits for your bulk or cut — built around your actual numbers.</p>
+        <div class="app-links">
+          <a href="/calculator" class="link-pill pill-support">Support</a>
+          <a href="/calculator/privacy" class="link-pill pill-privacy">Privacy Policy</a>
+        </div>
+      </div>
+
+      <div class="app-card">
+        <div class="app-icon">🏋️</div>
+        <div class="app-name">1RM & Strength Standards</div>
+        <p class="app-desc">Calculate your one-rep max and see where you rank against strength standards across the main lifts.</p>
+        <div class="app-links">
+          <a href="/strength" class="link-pill pill-support">Support</a>
+          <a href="/strength/privacy" class="link-pill pill-privacy">Privacy Policy</a>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2026 Maximal Performance · <a href="https://maximalperformance.nz">maximalperformance.nz</a></p>
+  </footer>
+
+</body>
+</html>
